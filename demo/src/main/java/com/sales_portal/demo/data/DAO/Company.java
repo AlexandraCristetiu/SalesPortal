@@ -1,13 +1,18 @@
 package com.sales_portal.demo.data.DAO;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
+
 @Data
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "company")
 @NoArgsConstructor
 public class Company {
     @Id
@@ -24,4 +29,9 @@ public class Company {
     private Set<Contact> contact;
 
 
+    @Builder
+    public Company(String company_name, String company_address,
+                   String company_website, String phone_number, String invoicing_details){
+
+    }
 }
