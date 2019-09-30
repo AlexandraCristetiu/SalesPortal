@@ -15,6 +15,7 @@ public class Projects {
     private String start_date;
     private String delivery_date;
     private String contact_person;
+    private Integer user_id;
 
     @ManyToOne
     @JoinColumn(name = "contact_id")

@@ -7,19 +7,20 @@ import lombok.Getter;
 public class CompanyDTO {
 
 
+    private Integer company_id;
     private String company_name;
     private String company_website;
     private String company_address;
     private String phone_number;
     private String invoicing_details;
 
-    public CompanyDTO( String company_name,
-                      String company_website, String company_address, String phone_number, String invoicing_details) {
+    public CompanyDTO(Company c) {
 
-        this.company_name = company_name;
-        this.company_website = company_website;
-        this.company_address = company_address;
-        this.phone_number = phone_number;
-        this.invoicing_details = invoicing_details;
+        this.company_id = c.getCompany_id();
+        this.company_name = c.getCompany_name();
+        this.company_website = c.getCompany_website();
+        this.company_address = c.getCompany_address();
+        this.phone_number = c.getPhone_number();
+        this.invoicing_details = c.getInvoicing_details();
     }
 }

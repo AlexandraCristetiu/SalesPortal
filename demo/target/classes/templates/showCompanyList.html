@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show All Companies</title>
+    <link rel="stylesheet" type="text/css" href="/css/basic.css">
+
+</head>
+<body>
+<!--<div class="logout" >
+
+    <p th:text="#{home.welcome}"> Hallo </p>
+    <span th:text="${#httpServletRequest.remoteUser}">User</span>
+    <form th:action="@{/logout}" method="post">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <input type="submit" value ="Logout"/>
+    </form>
+</div>-->
+
+
+<li th:each="c : ${company}">
+
+    <!--<a th:href="@{/mvc/company/{id}/delete(id=${u.id})}">-->
+        <!--<img class = "deleteUser"/>-->
+    <!--</a>-->
+
+    <span th:text="${c.company_name}">Company name </span>
+    <span th:text="${c.company_website}">Website </span>
+    <span th:text="${c.company_address}">Address </span>
+    <span th:text="${c.phone_number}">Phone number </span>
+    <span th:text="${c.invoicing_details}">Invoicing details </span>
+
+</li>
+
+</p>
+<!--<p>
+    <a href ="/mvc/company/insert">Add </a> new user
+
+</p>-->
+</body>
+
+</html>

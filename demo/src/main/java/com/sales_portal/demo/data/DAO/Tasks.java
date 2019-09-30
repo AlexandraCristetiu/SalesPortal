@@ -6,24 +6,23 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
-
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "company")
+@Table(name = "tasks")
 @NoArgsConstructor
-public class Company {
+public class Tasks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer company_id;
-    private String company_name;
-    private String company_website;
-    private String company_address;
-    private String phone_number;
-    private String invoicing_details;
+    private Integer task_id;
+    private String message;
+    private Date date_created;
+    private Date ToDo_date;
     private Integer user_id;
+
 
     @ManyToMany
     @JoinTable(name = "company_to_contact")
@@ -31,8 +30,8 @@ public class Company {
 
 
     @Builder
-    public Company(String company_name, String company_address,
-                   String company_website, String phone_number, String invoicing_details){
+    public Tasks(String message, Date date_created,
+                 Date ToDo_date, Integer user_id){
 
     }
 }

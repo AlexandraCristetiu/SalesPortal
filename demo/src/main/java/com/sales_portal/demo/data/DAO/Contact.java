@@ -16,8 +16,9 @@ public class Contact {
     private String email;
     private String phone_number;
     private String address;
+    private Integer user_id;
 
-    @ManyToMany(mappedBy = "company_name")
+    @ManyToMany(mappedBy = "contact")
     private Set<Company> companies;
 
     @OneToMany(mappedBy = "contact")
