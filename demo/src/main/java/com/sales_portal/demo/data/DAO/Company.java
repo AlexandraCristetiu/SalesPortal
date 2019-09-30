@@ -24,7 +24,7 @@ public class Company {
     private String phone_number;
     private String invoicing_details;
 
-    @ManyToMany(mappedBy = "company_name")
+    @ManyToMany
     @JoinTable(name = "company_to_contact")
     private Set<Contact> contact;
 

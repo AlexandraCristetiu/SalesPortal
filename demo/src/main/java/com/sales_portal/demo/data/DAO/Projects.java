@@ -17,6 +17,6 @@ public class Projects {
     private String contact_person;
 
     @ManyToOne
-    @JoinColumn(name = "contact_name")
+    @JoinColumn(name = "contact_id")
     private Contact contact;
 }

@@ -20,6 +20,6 @@ public class Contact {
     @ManyToMany(mappedBy = "company_name")
     private Set<Company> companies;
 
-    @OneToMany(mappedBy = "contact_name")
+    @OneToMany(mappedBy = "contact")
     private List<Projects> projects;
 }
