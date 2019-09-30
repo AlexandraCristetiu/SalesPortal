@@ -31,8 +31,13 @@ public class Company {
 
 
     @Builder
-    public Company(String company_name, String company_address,
-                   String company_website, String phone_number, String invoicing_details){
+    public Company(String company_name,
+                   String company_website, String phone_number, String company_address, String invoicing_details){
+        this.company_name = company_name;
+        this.company_address =company_address;
+        this.company_website = company_website;
+        this.phone_number = phone_number;
+        this.invoicing_details=invoicing_details;
 
     }
 }
