@@ -22,16 +22,18 @@ public class DemoApplication extends SpringBootServletInitializer implements Web
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/img/**")
-				.addResourceLocations("/WEB-INF/img/")
-				.resourceChain(true)
-				.addResolver(new PathResourceResolver());
 
-
-		registry.addResourceHandler("/css/**")
-				.addResourceLocations("/WEB-INF/css/")
-				.resourceChain(true)
-				.addResolver(new PathResourceResolver());
+		registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+//		registry.addResourceHandler("/img/**")
+//				.addResourceLocations("/static/img/")
+//				.resourceChain(true)
+//				.addResolver(new PathResourceResolver());
+//
+//
+//		registry.addResourceHandler("/css/**")
+//				.addResourceLocations("/static/css/")
+//				.resourceChain(true)
+//				.addResolver(new PathResourceResolver());
 	}
 
 

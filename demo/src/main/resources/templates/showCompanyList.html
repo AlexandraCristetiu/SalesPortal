@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Show All Companies</title>
-    <link rel="stylesheet" type="text/css" href="/css/basic.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/showCompanyList.css">
 
 </head>
 <body>
@@ -16,21 +22,48 @@
         <input type="submit" value ="Logout"/>
     </form>
 </div>-->
+<div class="main">
 
+    <ul>
+        <li><a href= "loginForm.html" target="_blank">Login</a></li>
+        <li><a href= "client_view.html" target="_blank">Clients</a></li>
+        <li><a href= "projects.html" target="_blank"> Projects</a></li>
+        <li><a href= "tasks.html" target="_blank">Tasks</a></li>
+        <li><a href= "contact.html" target="_blank">Contact</a></li>
+    </ul>
+</div>
+<ul class="add_comp">
+    <li class="add_comp"><a href="new_company.html"> Add a new company</a></li>
+</ul>
 
-<li th:each="c : ${company}">
+<table class= "striped" th:each="c : ${company}" >
 
+    <thead>
+    <tr>
+        <td>Company name</td>
+        <td>Website</td>
+        <td>Address</td>
+        <td>Phone Number</td>
+        <td>Invoicing details</td>
+        <td>Actions</td>
+    </tr>
+    </thead>
     <!--<a th:href="@{/mvc/company/{id}/delete(id=${u.id})}">-->
         <!--<img class = "deleteUser"/>-->
     <!--</a>-->
-
-    <span th:text="${c.company_name}">Company name </span>
-    <span th:text="${c.company_website}">Website </span>
-    <span th:text="${c.company_address}">Address </span>
-    <span th:text="${c.phone_number}">Phone number </span>
-    <span th:text="${c.invoicing_details}">Invoicing details </span>
-
-</li>
+    <tbody>
+    <tr>
+    <td> <span th:text="${c.company_name}">Company name </span></td>
+        <td><span th:text="${c.company_website}">Website </span></td>
+    <td><span th:text="${c.company_address}">Address </span></td>
+    <td><span th:text="${c.phone_number}">Phone number </span></td>
+    <td><span th:text="${c.invoicing_details}">Invoicing details </span></td>
+    <td>  <i class="material-icons">edit</i>
+        <i class="material-icons">delete</i>
+    </td>
+    </tr>
+    </tbody>
+</table>
 
 </p>
 <!--<p>
