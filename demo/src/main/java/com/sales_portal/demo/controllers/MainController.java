@@ -1,6 +1,7 @@
 package com.sales_portal.demo.controllers;
 
-import com.sales_portal.demo.data.services.CompanyService;
+import com.sales_portal.demo.services.CompanyService;
+import com.sales_portal.demo.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,11 +35,11 @@ public class MainController {
         return mv;
     }
 
-//    private UserService userService;
-//
+    private UserService userService;
+
 //    @RequestMapping("/mvc/greet/{userId}")
-//    public String greet(Model model, @PathVariable Integer userId){
-//        model.addAttribute("userName",userService.getUserName(userId));
+//    public String greet(Model model, @PathVariable String emailAddress){
+//        model.addAttribute("userName",userService.getEmailAddress(emailAddress));
 //        return "welcome";
 //    }
 //    @RequestMapping("mvc/user/showAll")

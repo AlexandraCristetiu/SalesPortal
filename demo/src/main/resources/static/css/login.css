@@ -1,18 +1,19 @@
-
-.insertCompany{
-  width: 700px;
-
+.login-page{
+  width: 360px;
+  padding: 10% 0 0 ;
   margin: auto;
 }
+
 .form{
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.3);
-  max-width: 700px;
+  max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
 }
+
 .form input{
   font-family: sans-serif;;
   outline: 1;
@@ -22,26 +23,37 @@
   margin: 5px 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: 14px;
   color: #ffffff;
 }
 
-button{
+.form button{
   font-family: sans-serif;
   text-transform: uppercase;
   outline: 0;
   background: #A2D9CE;
-  width: 25%;
+  width: 100%;
   border: 0;
   padding: 15px;
   color: #ffffff;
   font-size: 14px;
   cursor: pointer;
   border-radius: 20px;
+}
+
+.form button:hover, .form button:active{
+  background: #73C6B6;
 
 }
 
-button:hover,  button:active{
-  background: #73C6B6;
+.form .message{
+  margin: 25px 0 0 ;
+  color: #fff;
+  font-size: 15px;
 
+}
+
+.form .message a{
+  color: #1F618D  ;
+  text-decoration: none;
 }

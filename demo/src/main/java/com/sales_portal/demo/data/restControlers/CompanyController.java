@@ -1,13 +1,8 @@
 package com.sales_portal.demo.data.restControlers;
 
-import com.sales_portal.demo.data.DTO.CompanyDTO;
-import com.sales_portal.demo.data.services.CompanyService;
-import com.sales_portal.demo.data.services.ICompanyService;
+import com.sales_portal.demo.services.ICompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 public class CompanyController {

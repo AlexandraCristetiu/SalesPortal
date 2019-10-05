@@ -1,5 +1,6 @@
 package com.sales_portal.demo.data.DAO;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,15 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer user_id;
 
-    private String email_address;
+    private String emailAddress;
     private String password;
     private String name;
+
+    @Builder
+    private Users(Integer user_id, String emailAddress, String password, String name){
+        this.user_id = user_id;
+        this.emailAddress = emailAddress;
+        this.password = password;
+        this.name = name;
+    }
 }

@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.example.demoSpring.beans")
+@ComponentScan("com.sales_portal.demo.beans")
 public class AppConfig {
 
 }

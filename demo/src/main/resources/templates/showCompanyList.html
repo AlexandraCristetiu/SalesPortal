@@ -36,7 +36,7 @@
     <li class="add_comp"><a href="new_company.html"> Add a new company</a></li>
 </ul>
 
-<table class= "striped" th:each="c : ${company}" >
+<table class= "striped" >
 
     <thead>
     <tr>
@@ -51,7 +51,7 @@
     <!--<a th:href="@{/mvc/company/{id}/delete(id=${u.id})}">-->
         <!--<img class = "deleteUser"/>-->
     <!--</a>-->
-    <tbody>
+    <tbody  th:each="c : ${company}">
     <tr>
     <td> <span th:text="${c.company_name}">Company name </span></td>
         <td><span th:text="${c.company_website}">Website </span></td>
@@ -65,7 +65,7 @@
     </tbody>
 </table>
 
-</p>
+
 <!--<p>
     <a href ="/mvc/company/insert">Add </a> new user
 
